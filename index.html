@@ -1,0 +1,644 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Flow Designer and IntegrationHub - March 10, 2018</title>
+
+	<link rel="stylesheet" href="../../css/reveal.css">
+	<link rel="stylesheet" href="../../css/theme/black.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="../../lib/css/zenburn.css">
+	<style type="text/css">
+		/* 1. Style header/footer <div> so they are positioned as desired. */
+
+		#header-left {
+			position: absolute;
+			top: 0%;
+			left: 0%;
+		}
+
+		#header-right {
+			position: absolute;
+			top: 0%;
+			right: 0%;
+		}
+
+		#footer-left {
+			position: absolute;
+			bottom: 0%;
+			left: 0%;
+		}
+
+		#footer-right {
+			position: absolute;
+			bottom: 0%;
+			right: 0%;
+		}
+	</style>
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? '../../ css/print/pdf.css' : '../../css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+
+	<!-- 2. Create hidden header/footer <div> -->
+	<div id="hidden" style="display:none;">
+		<div id="header">
+			<div id="header-left">
+				<img src="images/SN_Twitter_profile_image.png" width="150" height="150" />
+			</div>
+			<div id="footer-right">Developer.ServiceNow.com</div>
+			<div id="footer-left">@DaveSlusherNOW</div>
+		</div>
+	</div>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Flow Designer and IntegrationHub</h2>
+				<p>
+					<small>March 10, 2018 - Chennai Developer Meetup</small>
+					<small>Dave Slusher / Developer Advocate / dave.slusher@servicenow.com /
+						<a href="http://twitter.com/DaveSlusherNOW">@DaveSlusherNOW</a>
+					</small>
+				</p>
+			</section>
+			<section>
+					<h2>More Information and Free Developer Instances Available at developer.servicenow.com</h2>
+					<img src="images/SN_Twitter_Cover_image.png" />
+					<ul>
+						
+					</ul>
+				</section>
+
+			<section>
+					<h2>Introduction</h2>
+					<div>
+				<ul>
+						<li class="fragment">Dave Slusher</li>
+						<li class="fragment">Developer Advocate for Platform</li>
+						<li class="fragment">20 Years as A Developer </li>
+						<li class="fragment">Mostly as a Full-Stack Developer </li>
+						<li class="fragment">4+ Years ServiceNow </li>
+						<li class="fragment">2+ Years as Developer Advocate</li>
+					</ul>
+					<div style="float: right; margin-left: 10px; margin-bottom: 10px;">		<img src="images/CoffeeShastra.png" width="30%" /></div>
+
+				</div>
+			</section>
+			<section>
+					<span>
+						<img src="images/ChennaiOffice.jpg" width="75%" />
+		</span>
+		</section>
+			<section>
+				<span>
+					<h2>Agenda</h2>
+
+					<ul>
+						<li class="fragment">Quick Overview of the State of Developer Tools</li>
+						<li class="fragment">Overview of Flow Designer</li>
+						<li class="fragment">What/Why IntegrationHub?</li>
+						<li class="fragment">Demo</li>
+						<li class="fragment">Licensing</li>
+						<li class="fragment">Q&A</li>
+					</ul>
+				</span>
+				<aside class="notes">These are speaker notes
+				</aside>
+			</section>
+			<section>
+				<section>
+					<span>
+						<h2>Developer Tools Advances</h2>
+
+						<ul>
+							<li class="fragment">Script Debugger</li>
+							<li class="fragment">Automated Test Framework</li>
+							<li class="fragment">Guided Tour Designer</li>
+						</ul>
+					</span>
+					<aside class="notes">
+					</aside>
+				</section>
+			</section>
+			<section>
+					<section>
+							<span>
+								<h2>Flow Designer</h2>
+		
+								<ul>
+									<li class="fragment">
+										New in Kingston
+									</li>
+									<li class="fragment">
+										Drag and Drop Builder for Logic
+									</li>
+		
+									<li class="fragment">
+											Familiar to Users of IFTTT and Zapier
+										</li>		
+								</ul>
+								<br />
+		
+							</span>
+							<aside class="notes">
+		
+							</aside>
+						</section>
+						<section>
+								<span>
+									<img src="images/FlowDesignerOverview.png" width="75%" />
+					</span>
+					</section>
+
+				<section>
+					<span>
+						<h2>Flow Designer</h2>
+
+						<ul>
+							<li class="fragment">
+								Sequences of Logic Built via Drag and Drop
+							</li>
+							<li class="fragment">
+								Flows Consist Of:
+							</li>
+
+							<ul>
+								<li class="fragment">
+									One Trigger
+								</li>
+								<li class="fragment">
+									Sequences of Actions and/or Logic
+								</li>
+							</ul>
+							<li class="fragment">
+								When Actions Reach Outside of Current Instance
+							</li>
+							<li class="fragment">
+								<font color="red">
+									<blink>IntegrationHub!!!</blink>
+								</font>
+							</li>
+
+						</ul>
+						<br />
+
+					</span>
+					<aside class="notes">
+
+					</aside>
+				</section>
+				<section>
+					<span>
+						<h2>Flow Designer Triggers</h2>
+
+						<ul>
+							<li class="fragment">
+								As of Kingston, 2 Types:
+							</li>
+							<li class="fragment">Time Based</li>
+							<li class="fragment">
+								Record Based
+							</li>
+						</ul>
+						<br />
+
+					</span>
+					<aside class="notes">
+
+					</aside>
+				</section>
+				<section>
+						<span>
+							<h2>Time Based</h2>
+	
+							<ul>
+									<li class="fragment">
+										Run Once
+									</li>
+									<li class="fragment">Run on Schedule</li>
+									<ul>
+										<li class="fragment">Daily</li>
+										<li class="fragment">Weekly</li>
+										<li class="fragment">Monthly</li>
+										<li class="fragment">Repeat</li>
+									</ul>
+	
+							</ul>
+							<br />
+	
+						</span>
+						<aside class="notes">
+	
+						</aside>
+					</section>
+					<section>
+							<span>
+								<h2>Record Based</h2>
+		<ul>
+			<li  class="fragment">Record Events:</li>
+								<ul>
+										<li class="fragment">Created</li>
+										<li class="fragment">Updated</li>
+										<li class="fragment">Created
+											<b>Or</b> Updated</li>
+										<li class="fragment">Deleted</li>
+									</ul>
+									<li class="fragment">Can Run on First Record Event </li>
+									<li class="fragment">Can Run on
+										<font color="red">Every</font> Record Event </li>
+		
+								</ul>
+		
+							</span>
+							<aside class="notes">
+		
+							</aside>
+						</section>				
+				<section>
+					<span>
+						<h2>Flow Designer Lifecycle</h2>
+
+						<ul>
+							<li class="fragment">
+								Similar to Workflow
+							</li>
+							<li class="fragment">
+								When Triggered by a Record
+							</li>
+							<ul>
+								<li class="fragment">
+									Record is Cached at Trigger Time
+								</li>
+								<li class="fragment">
+									Updates to Record Do Not Affect Flow by Default
+								</li>
+								<li class="fragment">
+									A Flow Action Must Explicitly Re-fetch Data for Changes
+								</li>
+
+							</ul>
+
+						</ul>
+						<br />
+
+					</span>
+					<aside class="notes">
+
+					</aside>
+				</section>
+				<section>
+					<span>
+						<h2>Flow Designer Actions</h2>
+
+						<ul>
+							<li class="fragment">
+								Grouped into Spokes (Scopes) by Vertical
+								</li>
+							<li class="fragment">
+								ServiceNow Core Actions
+							</li>
+							<li class="fragment">
+									Others Included on Baseline Instance
+								</li>
+	
+							<li class="fragment">
+									Can (and Will) Create Your Own Actions <span class="fragment">from Steps</span>
+							</li>	
+							<li class="fragment">
+									Designed to Require Minimum of Configuration
+							</li>	
+					</ul>
+						<br />
+
+					</span>
+					<aside class="notes">
+
+					</aside>
+				</section>
+ 	<section>
+						<span>
+							<img src="images/Graph.png" width="75%" />
+			</span>
+			</section>
+			<section>
+					<span>
+						<h2>Flow Designer Conditions</h2>
+			
+						<ul>
+							<li class="fragment">
+								As of Kingston, 2 Types
+								</li>
+								<ul>
+										<li class="fragment">
+											Branching Logic (If)
+											</li>
+										<li class="fragment">
+											Looping Logic (For Each)
+										</li>
+										</ul>
+					</ul>
+						<br />
+			
+					</span>
+					<aside class="notes">
+			
+					</aside>
+				</section>
+				<section>
+						<span>
+							<img src="images/FlowDesignerConditions.png" width="75%" />
+			</span>
+			</section>
+
+			<section>
+						<span>
+							<h2>Flow Designer Action Steps</h2>
+	
+							<ul>
+								<li class="fragment">
+									Smaller Units of Functionality
+									</li>
+								<li class="fragment">
+									Grouped Together To Form Actions
+								</li>
+								<li class="fragment">
+									Perform Basic ServiceNow Functions <span class="fragment">Including Executing Script</span>
+								</li>	
+								<li class="fragment">
+										Built Drag and Drop just Like Flows
+									</li>	
+								</ul>
+							<br />
+	
+						</span>
+						<aside class="notes">
+	
+						</aside>
+					</section>
+
+			<section>
+					<span>
+						<img src="images/FlowDesignerSteps.png" width="75%" />
+		</span>
+		</section>
+		<section>
+				<span>
+					<h2>Flow Creation</h2>
+
+					<ul>
+						<li class="fragment">
+							Has Similar Edit Cycle as Workflow
+							</li>
+						<li class="fragment">
+							Edit or Create Actions <span class="fragment">Then Publish</span>
+						</li>
+						<li class="fragment">
+							Edit or Create Flows <span class="fragment">Then Activate</span>
+						</li>	
+						<li class="fragment">Already Running Flows Keep Original Context</li>	
+						</ul>
+					<br />
+
+				</span>
+				<aside class="notes">
+
+				</aside>
+			</section>
+			<section>
+					<span>
+						<h2>Flow Designer Data Flow</h2>
+	
+						<ul>
+							<li class="fragment">Data can be Passed Action to Action</li>
+							<li class="fragment">Data can be Passed Step to Steps</li>
+							<li class="fragment">Action and Steps have Outputs</li>
+							<li class="fragment">Using Data Pill Picker</li>
+							<li class="fragment"><img src="images/DataPillPicker.png" /></li>
+							<li class="fragment">Same as ATF</li>
+							</ul>
+						<br />
+	
+					</span>
+					<aside class="notes">
+	
+					</aside>
+				</section>			
+		</section>		
+			<section>
+				<section>
+					<span>
+						<h2>IntegrationHub</h2>
+
+						<ul>
+							<li class="fragment">
+								When a Flow Causes Actions <font color="red">Anywhere</font> but Current Instance: 
+							</li>
+							<li class="fragment">
+								IntegrationHub
+							</li>
+							<li class="fragment">
+									Flow Designer Can Be Used Without IntegrationHub
+								</li>
+								<li class="fragment">
+										IntegrationHub Cannot Be Used Without Flow Designer
+									</li>
+									
+						</ul>
+						<br />
+
+					</span>
+					<aside class="notes">
+
+					</aside>
+				</section>
+				<section>
+					<span>
+						<h2>IntegrationHub</h2>
+
+						<ul>
+							<li class="fragment">
+								Pre-Built Integrations
+							</li>
+							<ul>
+									<li class="fragment">Connect</li>
+									<li class="fragment">Slack</li>
+									<li class="fragment">HipChat</li>
+									<li class="fragment">Microsoft Teams</li>
+									<li class="fragment">VTB</li>
+									<li class="fragment">eBonding</li>
+							</ul>
+						</ul>
+						<br />
+
+					</span>
+					<aside class="notes">
+
+					</aside>
+				</section>
+				<section>
+						<span>
+							<img src="images/DataFlow.png" width="75%" />
+			</span>
+			</section>
+			
+				<section>
+					<span>
+						<h2>IntegrationHub</h2>
+
+						<ul>
+							<li class="fragment">
+								Can Create Your Own Integrations
+							</li>
+							<li class="fragment">Built via Action Steps</li>
+							<li class="fragment">Using REST Step Types</li>
+						</ul>
+
+					</span>
+					<aside class="notes">
+
+					</aside>
+				</section>
+				<section>
+						<span>
+							<img src="images/IntegrationHubGraphic.png" width="75%" />
+			</span>
+			</section>
+
+			</section>
+
+
+			<section>
+				<h2>Demo!</h2>
+
+				<a href="https://dev25095.service-now.com/$flow-designer.do?sysparm_nostack=true" target="_blank">See it in action</a>
+
+			</section>
+
+				<section>
+						<span>
+							<h2>When to Use Flow Designer or IntegrationHub?</h2>
+	
+							<ul>
+								<li class="fragment">Functionality is Available</li>
+								<li class="fragment">Problem is Appropriate</li>
+								<li class="fragment">Non-Developer SME Need to Maintain</li>
+								<li class="fragment">???</li>
+							</ul>
+	
+						</span>
+						<aside class="notes">
+	
+						</aside>
+					</section>
+	
+
+			<section>
+				<section>
+					<span>
+						<h2>Licensing</h2>
+						<ul>
+								<li class="fragment">Flow Designer has No Licensing
+								</li>
+								<li class="fragment">IntegrationHub <font color="red">Does</font> Require Additional Licensing</li>
+								<li class="fragment">REST Steps Require Licensing</li>
+								<li class="fragment"><img src="images/ScriptStep.png"/></li>
+								<li class="fragment"><font color="red">Only</font> Integration Scripts Require Licensing</li>
+							</ul>
+					</span>
+					<aside class="notes">
+					</aside>
+				</section>
+			</section>
+				<section data-background="images/Pratt.gif">
+					<h2 class="fragment">There are wonderful things in here!</h2>
+					<h2 class="fragment">Let's build something impressive! </h2>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Questions?</h2>
+					<img src="images/EintsteinQuestionEverything.png" />
+				</section>
+			</section>
+			<section>
+				<h2>More Information and Free Developer Instances Available at developer.servicenow.com</h2>
+				<img src="images/SN_Twitter_Cover_image.png" />
+			</section>
+			<section>
+				<h1>Thank You!</h1>
+			</section>
+		</div>
+	</div>
+
+	<script src="../../lib/js/head.min.js"></script>
+	<script src="../../js/reveal.js"></script>
+
+	<script>
+		// More info https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			history: true,
+			controls: true,
+			progress: true,
+			center: true,
+
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			dependencies: [{
+					src: '../../plugin/markdown/marked.js'
+				},
+				{
+					src: '../../plugin/markdown/markdown.js'
+				},
+				{
+					src: '../../plugin/notes/notes.js',
+					async: true
+				},
+				{
+					src: '../../plugin/highlight/highlight.js',
+					async: true,
+					callback: function () {
+						hljs.initHighlightingOnLoad();
+					}
+				}
+			]
+		});
+	</script>
+	<script src="scripts/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript">
+		// 3. On Reveal.js ready event, copy header/footer <div> into each `.slide-background` <div>
+		var header = $('#header').html();
+		if (window.location.search.match(/print-pdf/gi)) {
+			Reveal.addEventListener('ready', function (event) {
+				$('.slide-background').append(header);
+			});
+		} else {
+			$('div.reveal').append(header);
+		}
+		Reveal.addEventListener('demo', function () {
+			console.log('"demo" has fired');
+			setTimeout(function () {
+				var pop = window.open('http://helsinki', 'demo'); // opens in new tab on most browsers
+			}, 1000);
+		});
+
+		Reveal.configure({
+			keyboard: {
+				40: 'next', // go to the next slide when the Inateck down key is pressed
+				38: 'prev' // go to the previous slide when the up
+			}
+		});
+	</script>
+</body>
+
+</html>
