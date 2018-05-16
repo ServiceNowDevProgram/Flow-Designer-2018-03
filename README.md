@@ -1,5 +1,5 @@
-# JakartaDevTools
-Reveal presentation template for the Developer Tools talk as of Jakarta
+# Flow Designer talk
+Reveal presentation for Flow Designer and Integration Hub talk circa spring 2018
 
 ## Run Presentation Locally
 
